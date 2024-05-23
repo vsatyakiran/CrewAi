@@ -34,8 +34,11 @@ To view the original content, please visit the [official documentation](https://
 * The agents can also collaborate with each other to delegate tasks and communicate effectively. This allows for dynamic task management and problem-solving within the crew. The agents can use the CrewAI tools to perform various actions such as web searching, data analysis, content generation, and agent collaboration.
 
 * I will provide code snippets to demonstrate how to create local models and use them to generate content, in the next section.
+  
 <hr>
+
 # Results 
+
 ![crewai](https://github.com/vsatyakiran/CrewAi/assets/103512987/9f3bab28-bc1a-42c2-b03a-ab7a071dfb39)
 
 
