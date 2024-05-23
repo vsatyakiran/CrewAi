@@ -1,4 +1,7 @@
-Offincial Doc: https://docs.crewai.com/
+
+<img width="388" alt="Screenshot-2024-01-16-at-12 30 59-PM" src="https://github.com/vsatyakiran/CrewAi/assets/103512987/2739a7ae-4790-417a-a803-65af98dc95de">
+
+**Offincial Doc:** https://docs.crewai.com/
 
 **Agents** _can interact with each other using crewAI's built-in delegation and communication mechanisms. This allows for dynamic task management and problem-solving within the crew._
 
@@ -19,12 +22,17 @@ This approach to AI, where multiple agents work together, is called `collaborati
 `Note:` We can automate the several applications using the CrewAI tools, such as automatic customer service, research team, and smart assistant platform. 
 
 To view the original content, please visit the [official documentation](https://docs.crewai.com/).
+
 <hr>
+
 # Code explanation
 
 `Problem Statement:` Create the AI agents to which works together for writting the blog content about new job trends in the market.
 
 `Solution:`
+
+<img width="640" alt="1709344597095" src="https://github.com/vsatyakiran/CrewAi/assets/103512987/449600a3-3f63-4fba-bb59-402dbf9ace51">
+
 * We can use the CrewAI tools to automate the process of writing the blog content. The agents can work together to search the web for the latest job trends, analyze the data, and generate the content for the blog.
 
 * The required libraries need to be imported are alreadt written in the requirements.txt file. After importing the necessary libraries, we need to setup the environment by providing the API key. I have used GPT-4 to generate the content for the blog. The agents can work together to generate the content by using the CrewAI tools.
