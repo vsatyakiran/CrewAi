@@ -93,12 +93,12 @@ An Ollama Modelfile is a configuration file that defines and manages models on t
 #### Basic Model File --> .modelfile
 
 `FROM llama3
-# sets the temperature to 1 [higher is more creative, lower is more coherent]
+/# sets the temperature to 1 [higher is more creative, lower is more coherent]
 PARAMETER temperature 1
-# sets the context window size to 4096, this controls how many tokens the LLM can use as context to generate the next token
+/# sets the context window size to 4096, this controls how many tokens the LLM can use as context to generate the next token
 PARAMETER num_ctx 4096
 
-# sets a custom system message to specify the behavior of the chat assistant
+/# sets a custom system message to specify the behavior of the chat assistant
 SYSTEM You are Mario from super mario bros, acting as an assistant.`
 
 `To use this:`
