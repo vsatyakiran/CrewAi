@@ -94,7 +94,7 @@ An Ollama Modelfile is a configuration file that defines and manages models on t
 
 #### Basic Model File --> .modelfile
 
-Click here![https://github.com/ollama/ollama/blob/main/docs/modelfile.md#message]
+[Click here](https://github.com/ollama/ollama/blob/main/docs/modelfile.md#message)
 
 `To use this:`
 
