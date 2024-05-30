@@ -49,4 +49,62 @@ To view the original content, please visit the [official documentation](https://
 
 ![crewai](https://github.com/vsatyakiran/CrewAi/assets/103512987/9f3bab28-bc1a-42c2-b03a-ab7a071dfb39)
 
+<hr>
+
+# Issues faced while setting up local model (lamma3)
+
+#### DNS Blockage :
+`"https://dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com/ollama/docker/registry/v2/blobs/sha256/6a/6a0746a1ec1aef3e7ec53868f220ff6e389f6f8ef87a01d77c96807de94ca2aa/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=66040c77ac1b787c3af820529859349a%!F(MISSING)20240530%!F(MISSING)auto%!F(MISSING)s3%!F(MISSING)aws4_request&X-Amz-Date=20240530T080450Z&X-Amz-Expires=1200&X-Amz-SignedHeaders=host&X-Amz-Signature=60e191513e01054b43f97a347a4a7345c0f2599ee6c350d73704994e78ffa9f2": dial tcp: lookup dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com: no such host"` <br>
+**1. DNS Settings**
+  
+Sometimes, DNS issues can be resolved by changing your DNS settings to use a public DNS server like Google DNS or Cloudflare DNS.
+
+**2.Change DNS Settings (Windows):**
+- `Open Network and Sharing Center:`
+-Right-click on the network icon in the system tray and select "Open Network & Internet settings".
+-Click on "Network and Sharing Center".
+
+**3.Change Adapter Settings:**
+
+- Click on "Change adapter settings" on the left-hand side.
+
+**Properties:**
+
+- Right-click on your active network connection and select "Properties".
+- Internet Protocol Version 4 (TCP/IPv4):
+- Select "Internet Protocol Version 4 (TCP/IPv4)" and click on "Properties".
+- Use the following DNS server addresses:
+- Select "Use the following DNS server addresses" and enter the following:
+- Preferred DNS server: 8.8.8.8 (Google DNS) or 1.1.1.1 (Cloudflare DNS)
+- Alternate DNS server: 8.8.4.4 (Google DNS) or 1.0.0.1 (Cloudflare DNS)
+- Apply and Close:
+- Click "OK" to apply the settings and close all windows.
+
+#### Flush DNS:
+- In the Command Prompt, type the following command and press Enter `ipconfig /flushdns`
+
+#### Test DNS Resolution
+- **Ping Command** `ping dd20bb891979d25aebc8bec07b2b3bbc.r2.cloudflarestorage.com`
+
+# ModelFile
+
+An Ollama Modelfile is a configuration file that defines and manages models on the Ollama platform. Create new models or modify and adjust existing models through model files to cope with some special application scenarios.
+
+#### Basic Model File --> .modelfile
+
+`FROM llama3
+# sets the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+# sets the context window size to 4096, this controls how many tokens the LLM can use as context to generate the next token
+PARAMETER num_ctx 4096
+
+# sets a custom system message to specify the behavior of the chat assistant
+SYSTEM You are Mario from super mario bros, acting as an assistant.`
+
+`To use this:`
+
+Markup: 1.Save it as a file (e.g. Modelfile)
+        2.ollama create choose-a-model-name --file example.modelfile'
+        3.ollama run choose-a-model-name
+        4.Start using the model!
 
